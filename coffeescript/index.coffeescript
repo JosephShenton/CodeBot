@@ -1,0 +1,310 @@
+styles = """
+/* 
+ * "Code Righter" v1.0.0
+ * Robot rights protected under BOT License
+ * Authored by @TeamiHackify
+ * Creator's Website timedevs.net/
+ * Download Link add this to the end of the current website with a 
+ * forwardslash timedevs-net.zip
+ */
+
+body {
+  background-color: #222; color: #fff;
+  font-size: 13px; line-height: 1.4;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* ...                  
+ *
+ * ...Hello Anyone Here?            
+ *
+ * Oh Hi There. If You Don't Know Me I Am @TeamiHackify     
+ *
+ * Don't Mind Me I Am Just Simply Coding.            
+ *
+ * Oh And Feel Free To Stay And Watch.                       
+ *
+ *
+ * This SCSS is being injected into a DOM <style> element 
+ * and written in this <pre> element simultaneously.        
+ *
+ * Don't Understand? Just Watch!
+ *
+ */
+
+pre { 
+  position: fixed; width: 48%;
+  top: 30px; bottom: 30px; left: 26%;
+  transition: left 500ms;
+  background-color: #313744; color: #a6c3d4;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 24px 12px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0px 4px 0px 2px rgba(0,0,0,0.1);
+}
+
+
+/* 
+ * Highlighting Syntax 
+ * Colors Relative To Base16 Ocean Dark
+ */
+
+pre em:not(.comment) { font-style: normal; }
+
+.comment       { color: #707e84; }
+.selector      { color: #c66c75; }
+.selector .key { color: #c66c75; }
+.key           { color: #c7ccd4; }
+.value         { color: #d5927b; }
+
+
+/* 
+ * Let's Build A Little SCSS heart.
+ */ 
+
+
+/* First, We'll Move This Crap Over */
+
+pre { left: 50%; }
+
+
+/* Now We Can Build A SCSS Heart */
+
+#heart, #echo { 
+  position: fixed;
+  width: 300px; height: 300px;
+  top: calc(50% - 150px); left: calc(25% - 150px);
+  text-align: center;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#heart { z-index: 8; }
+#echo  { z-index: 7; }
+
+#heart::before, #heart::after, #echo::before, #echo::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 150px; height: 240px;
+    background: #c66c75;
+    border-radius: 150px 150px 0 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+
+#heart::before, #echo::before {
+  left: 150px;
+}
+
+#heart::after, #echo::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+
+/* It Needs Some Depth  */
+
+#heart::after { 
+  box-shadow:
+    inset -6px -6px 0px 6px rgba(255,255,255,0.1);
+}
+
+#heart::before { 
+  box-shadow:
+    inset 6px 6px 0px 6px rgba(255,255,255,0.1);
+}
+
+
+/* Makin it mine. */
+
+#heart i::before {
+  content: '@TeamiHackify';
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  top: 35%; left: 0;
+  font-style: normal;
+  color: rgba(255,255,255,0.8);
+  font-weight: 100;
+  font-size: 30px;
+  text-shadow: -1px -1px 0px rgba(0,0,0,0.2);
+}
+
+
+/* 
+ * Hearts Have To Beat. 
+ */
+
+@-webkit-keyframes heartbeat {
+  0%, 100% { 
+    -webkit-transform: scale(0.95); 
+            transform: scale(0.95); 
+  }
+  50% { 
+    -webkit-transform: scale(1.00); 
+            transform: scale(1.00); 
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(0.95); }
+  50%      { transform: scale(1.00); }
+}
+
+@-webkit-keyframes echo {
+  0%   { 
+    opacity: 0.1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% { 
+    opacity: 0;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
+
+@keyframes echo {
+  0%   { 
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  100% { 
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+
+/* 
+ * Perfect! Now To Make It Beat Continuously...
+ */
+
+#heart, #echo {
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-timing-function: 
+    cubic-bezier(0, 0, 0, 1.74);
+          animation-timing-function: 
+            cubic-bezier(0, 0, 0, 1.74);
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+#heart { 
+  -webkit-animation-name: heartbeat; 
+          animation-name: heartbeat; 
+}
+#echo { 
+  -webkit-animation-name: echo; 
+          animation-name: echo; 
+}
+
+
+/* 
+ * Ready...           
+ */
+
+#heart, #echo {
+
+/* 
+ * ...Set...          
+ */
+  
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  
+/* 
+ * ...Beat!        
+ */
+  
+}
+
+/* 
+ *
+ * Wahoo!         
+ *
+ * We did it!       
+ *
+ * Umm... I Me I Did It Sorry For Any Confusion
+ * But Joseph Shenton Totally Did Not Have Anything 
+ * To Do With This :P
+ *
+ * I Love Code Pen! So I Hope You Do As Well!    
+ * 
+ * Oh Yeah Before I Forget Follow Me On Twitter
+ * @TeamiHackify
+ *
+ * See You Guys Have Fun!
+ * 
+ * Feel Free To Use My Pen On Your Website Just Make Sure
+ * To Give Credit Or Leave The Copyright Stuff At The Top
+ * Thanks!
+ *
+ */
+"""
+
+openComment = true
+
+writeStyleChar = (which) ->
+	# Begin Wrapping Open Comments
+  if which == '/' && openComment == false
+    openComment = true
+    styles = $('#style-text').html() + which
+  else if which == '/' && openComment == true
+    openComment = false
+    styles = $('#style-text').html().replace(/(\/[^\/]*\*)$/, '<em class="comment">$1/</em>')
+  # Wrap Style Declaration
+  else if which == ':'
+    styles = $('#style-text').html().replace(/([a-zA-Z- ^\n]*)$/, '<em class="key">$1</em>:')
+  # Wrap Style Value 
+  else if which == ';'
+    styles = $('#style-text').html().replace(/([^:]*)$/, '<em class="value">$1</em>;')
+  # Wrap Selector
+  else if which == '{'
+    styles = $('#style-text').html().replace(/(.*)$/, '<em class="selector">$1</em>{')
+  else
+    styles = $('#style-text').html() + which
+  $('#style-text').html styles
+  $('#style-tag').append which
+
+writeStyles = (message, index, interval) ->
+  if index < message.length
+    pre = document.getElementById 'style-text'
+    pre.scrollTop = pre.scrollHeight
+    writeStyleChar message[index++]
+    setTimeout (->
+      writeStyles message, index, interval
+    ), interval
+    
+
+# Added Tags That I Will Need
+$('body').append """
+  <style id="style-tag"></style>
+	<span id="echo"></span>
+	<span id="heart"><i></i></span>
+	<pre id="style-text"></pre>
+"""
+
+# Faster Typing Inside The Code Page
+time = if window.innerWidth <= 578 then 4 else 16
+  
+# Starting The Whole Thing
+writeStyles(styles, 0, time)
+
+###
+Changelog:
+1.0.0
+Start Of New Life In Coding For @TeamiHackify!
+###
